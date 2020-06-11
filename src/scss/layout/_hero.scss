@@ -1,0 +1,38 @@
+.hero {
+    background-image: url('../images/cover.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    & .menu {
+        position: fixed;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary;
+    }
+
+    & .wrapper {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+        & h1 {
+            color: $color-light;;
+        }
+        & p {
+            color: $color-light;;
+        }
+        & .circle {
+            height: 45px;
+            width: 45px;
+            background-color: $color-light;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

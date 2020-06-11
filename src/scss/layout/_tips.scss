@@ -1,0 +1,16 @@
+.tips {
+    & .small {
+        color: $color-tertiary;
+    }
+    & .button_default {
+        border-radius: 22.5px;
+        border: 2px solid $color-highlight;
+        height: 45px;
+        width: 76px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-highlight;
+    }
+
+}
