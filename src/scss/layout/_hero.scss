@@ -1,6 +1,7 @@
 .hero {
     background-image: url('../images/cover.jpg');
     background-repeat: no-repeat;
+    background-size:cover;
     height: 100vh;
 
     & .menu {
@@ -17,13 +18,27 @@
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;  
         & h1 {
-            color: $color-light;;
+            text-transform: uppercase;
+            color: $color-light;
+            font-family: $font-family-title;
+            font-weight: $font-weight-bold;
+            font-size: 45px;
+            line-height: $line-height-l;
+            text-align: center;
+            margin-bottom: 10px;
+            & span {
+                display: block;
+            }
         }
         & p {
-            color: $color-light;;
+            color: $color-light;
+            font-family: $font-family-primary;
+            font-weight: $font-weight-regular;
+            font-size: 16px;
+            padding-bottom: 45px;
         }
         & .circle {
             height: 45px;
@@ -33,6 +48,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-bottom: 53px;
         }
     }
 }

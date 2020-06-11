@@ -1,18 +1,66 @@
 .purchase {
     & .wrapper {
         display: grid;
-        grid-template-rows: repeat(5,1fr);
+        grid-template-rows: 60px 1fr 1fr 1fr 150px;
         text-align: center;
+        & .reason_title {
+            text-transform: capitalize;
+            font-family: $font-family-title;
+            color: $color-dark;
+            font-size: 24px;
+            line-height: $line-height-s;
+            padding-top: 30px;
+        }
+        & .reason_1 {
+            padding-top: 45px;
+            line-height: $line-height-s;
+            & h3 {
+                font-family: $font-family-title;
+            } 
+            & p {
+                font-family: $font-family-primary;
+            } 
+        }
+        & .reason_2 {
+            padding-top: 45px;
+            line-height: $line-height-s;
+            & h3 {
+                font-family: $font-family-title;
+            } 
+            & p {
+                font-family: $font-family-primary;
+            }         
+        }
+        & .reason_3 {
+            padding-top: 45px;
+            line-height: $line-height-s;
+            & h3 {
+                font-family: $font-family-title;
+                
+            } 
+            & p {
+                font-family: $font-family-primary;
+            } 
+        }
         & .button_highlight {
             margin: auto;
             border-radius: 22.5px;
             background-color:$color_highlight;
             height: 45px;
             width: 184px;
-            color: $color_light;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 45px;
+            margin-bottom: 60px;
+            & span {
+                text-transform: initial;
+                font-family: $font-family-primary;
+                font-size: 20px;
+                color: $color-light;
+                font-weight: $font-weight-medium;
+                line-height: $line-height-m;
+            }
         }
     }
 }

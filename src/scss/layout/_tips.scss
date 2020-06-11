@@ -1,6 +1,27 @@
 .tips {
     & .small {
+        text-transform: capitalize;
         color: $color-tertiary;
+        font-family: $font-family-primary;
+        font-size: 14px;
+        line-height: $line-height-s;
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    & h2 {
+        text-transform: capitalize;
+        color: $color-dark;
+        font-family: $font-family-title;
+        font-weight: $font-weight-bold;
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+    & p {
+        color: $color-midtone;
+        font-family: $font-family-primary;
+        font-size: 18px;
+        line-height: $line-height-s;
+        padding-bottom: 30px;
     }
     & .button_default {
         border-radius: 22.5px;
@@ -10,7 +31,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $color-highlight;
+        margin-bottom: 45px;
+        & span {
+            color: $color-highlight;
+            font-family: $font-family-primary;
+            font-size: 20px;
+            line-height: $line-height-m;
+        }
     }
 
 }
