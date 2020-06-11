@@ -33,11 +33,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            & span {
+            transition: background-color ease-out 1s, font-style ease 1s;
+            & a {
                 color: $color-highlight;
                 font-family: $font-family-primary;
                 font-size: 20px;
                 line-height: $line-height-m;
+            }
+            &:hover {
+                background-color: $color-highlight;
+                & a {
+                    color: $color-light;
+                }
             }
         }
     }

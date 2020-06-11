@@ -53,13 +53,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            & span {
+            & a {
                 text-transform: initial;
                 font-family: $font-family-primary;
                 font-size: 20px;
                 color: $color-light;
                 font-weight: $font-weight-medium;
                 line-height: $line-height-m;
+                transition: font-size linear 0.5s;
+                &:hover {
+                    font-size: 22px;
+                }
             }
         }
     }
@@ -81,5 +85,20 @@ position: relative;
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        animation-name: up;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        
+    }
+}
+
+@keyframes up{
+    from {
+        transform: translate(-50%, -50%);
+    }
+    to {
+        transform: translate(-50%, -70%);
     }
 }
