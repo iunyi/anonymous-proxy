@@ -1,6 +1,30 @@
 .footer {
     background-color: $color-primary;
+    padding-top: 60px;
+    padding-bottom: 45px;
     & .wrapper {
         text-align: center;
+        & .menu_articles, .menu_social {
+            margin-bottom: 30px;
+            & a {
+                text-transform: uppercase;
+                color: $color-light;
+                font-family: $font-family-primary;
+                font-size: 16px;
+                line-height: $line-height-s;
+            }
+        }
+        & .copy {
+            color: $color-light;
+            font-family: $font-family-primary;
+            font-size: 14px;
+            line-height: $line-height-s;
+            & .block {
+                display: block;
+            }
+            & .heart {
+                color: $color-highlight;
+            }
+        }
     }
 }
