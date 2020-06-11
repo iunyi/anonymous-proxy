@@ -1,19 +1,21 @@
 .purchase {
+    background-color: $color-tertiary-light;
     & .wrapper {
+        padding-top: 30px;
+        padding-bottom: 60px;
         display: grid;
-        grid-template-rows: 60px 1fr 1fr 1fr 150px;
+        grid-template-rows: 75px 1fr 1fr 1fr 45px;
         text-align: center;
         & .reason_title {
-            text-transform: capitalize;
             font-family: $font-family-title;
             color: $color-dark;
             font-size: 24px;
             line-height: $line-height-s;
-            padding-top: 30px;
+            margin-bottom: 45px;
         }
         & .reason_1 {
-            padding-top: 45px;
             line-height: $line-height-s;
+            margin-bottom: 45px;
             & h3 {
                 font-family: $font-family-title;
             } 
@@ -22,8 +24,8 @@
             } 
         }
         & .reason_2 {
-            padding-top: 45px;
             line-height: $line-height-s;
+            margin-bottom: 45px;
             & h3 {
                 font-family: $font-family-title;
             } 
@@ -32,8 +34,8 @@
             }         
         }
         & .reason_3 {
-            padding-top: 45px;
             line-height: $line-height-s;
+            margin-bottom: 45px;
             & h3 {
                 font-family: $font-family-title;
                 
@@ -51,8 +53,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 45px;
-            margin-bottom: 60px;
             & span {
                 text-transform: initial;
                 font-family: $font-family-primary;
