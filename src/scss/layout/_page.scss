@@ -8,4 +8,8 @@ html {
         padding-left: 39px;
         padding-right: 39px;
     }
+    @include desktop {
+        padding-left: 275px;
+        padding-right: 275px;
+    }
 }

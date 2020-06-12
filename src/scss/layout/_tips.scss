@@ -5,6 +5,9 @@
         @include tablet {
             padding-bottom: 60px;
         }
+        @include desktop {
+            padding-top: 60px;
+        }
         & .small {
             text-transform: capitalize;
             color: $color-tertiary;
@@ -12,6 +15,9 @@
             font-size: 14px;
             line-height: $line-height-s;
             margin-bottom: 0;
+            @include desktop {
+                font-size: 16px;
+            }
         }
         & h2 {
             text-transform: capitalize;
@@ -22,7 +28,10 @@
             line-height: $line-height-m;
             margin-bottom: 15px;
             @include tablet {
-            margin-bottom: 30px;
+                margin-bottom: 30px;
+            }
+            @include desktop {
+                font-size: 32px;
             }
         }
         & p {
@@ -31,6 +40,9 @@
             font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 30px;
+            @include desktop {
+                font-size: 20px;
+            }
         }
         & .button_default {
             border-radius: 22.5px;
@@ -43,6 +55,9 @@
             transition: background-color ease-out 1s, font-style ease 1s;
             @include tablet {
                 width: 91px;
+            }
+            @include desktop {
+                width: 160px;
             }
             & a {
                 color: $color-highlight;
