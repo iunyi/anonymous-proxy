@@ -4,8 +4,37 @@
     padding-bottom: 45px;
     & .wrapper {
         text-align: center;
-        & .menu_articles, .menu_social {
+        display: flex;
+        flex-direction: column;
+        @include tablet{
+            text-align: left;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        & .menu_articles {
             margin-bottom: 30px;
+            @include tablet{
+                order: 1;
+                margin-left: 30px;
+                margin-bottom: 0;
+                width: 210px;
+            }
+            & a {
+                text-transform: uppercase;
+                color: $color-light;
+                font-family: $font-family-primary;
+                font-size: 16px;
+                line-height: $line-height-s;
+            }
+        }
+        .menu_social {
+            margin-bottom: 30px;
+            @include tablet{
+                order: 1;
+                margin-left: 30px;
+                margin-bottom: 0;
+                width: 210px;
+            }
             & a {
                 text-transform: uppercase;
                 color: $color-light;
@@ -19,6 +48,10 @@
             font-family: $font-family-primary;
             font-size: 14px;
             line-height: $line-height-s;
+            @include tablet{
+                width: 210px;
+            }
+            
             & .block {
                 display: block;
             }

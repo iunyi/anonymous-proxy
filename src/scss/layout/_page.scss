@@ -1,4 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
 .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+    @include tablet {
+        padding-left: 39px;
+        padding-right: 39px;
+    }
 }

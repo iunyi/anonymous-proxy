@@ -2,6 +2,9 @@
     & .wrapper {
         padding-top: 30px;
         padding-bottom: 45px;
+        @include tablet {
+            padding-bottom: 60px;
+        }
         & .small {
             text-transform: capitalize;
             color: $color-tertiary;
@@ -16,7 +19,11 @@
             font-family: $font-family-title;
             font-weight: $font-weight-bold;
             font-size: 24px;
+            line-height: $line-height-m;
             margin-bottom: 15px;
+            @include tablet {
+            margin-bottom: 30px;
+            }
         }
         & p {
             color: $color-midtone;
@@ -34,6 +41,9 @@
             justify-content: center;
             align-items: center;
             transition: background-color ease-out 1s, font-style ease 1s;
+            @include tablet {
+                width: 91px;
+            }
             & a {
                 color: $color-highlight;
                 font-family: $font-family-primary;

@@ -6,39 +6,80 @@
         display: grid;
         grid-template-rows: 75px 1fr 1fr 1fr 45px;
         text-align: center;
+        @include tablet {
+            grid-template-rows: 90px 1fr 45px;
+            grid-template-columns: repeat(3,1fr);
+        }
+
         & .reason_title {
+            text-transform: capitalize;
             font-family: $font-family-title;
             color: $color-dark;
             font-size: 24px;
             line-height: $line-height-s;
             margin-bottom: 45px;
+            @include tablet {
+                grid-column: 1 / 4;
+                grid-row: 1 / 2;
+                font-size: 26px;
+                line-height: $line-height-m;
+            }
         }
         & .reason_1 {
+            font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 45px;
+            @include tablet {
+                grid-column: 1 / 2;
+                grid-row: 2/ 3;
+                margin-bottom: 60px;
+            }
+
             & h3 {
                 font-family: $font-family-title;
+                @include tablet {
+                    margin-bottom: 14px;
+                }
             } 
             & p {
                 font-family: $font-family-primary;
             } 
         }
         & .reason_2 {
+            font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 45px;
+            @include tablet {
+                grid-column: 2/ 3;
+                grid-row: 2/ 3;
+                margin-bottom: 60px;
+            }
+    
             & h3 {
                 font-family: $font-family-title;
+                @include tablet {
+                    margin-bottom: 14px;
+                }
             } 
             & p {
                 font-family: $font-family-primary;
             }         
         }
         & .reason_3 {
+            font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 45px;
+            @include tablet {
+                grid-column: 3/ 4;
+                grid-row: 2/ 3;
+                margin-bottom: 60px;
+            }
+    
             & h3 {
                 font-family: $font-family-title;
-                
+                @include tablet {
+                    margin-bottom: 14px;
+                }
             } 
             & p {
                 font-family: $font-family-primary;
@@ -53,6 +94,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            @include tablet {
+                grid-column: 1/ 4;
+                grid-row: 3/ 4;
+                width: 210px;
+            }
+
             & a {
                 text-transform: initial;
                 font-family: $font-family-primary;
@@ -70,8 +117,6 @@
 }
 
 .arrow {
-width: 100vw;
-border: 1px solid black;
 position: relative;
     & .circle {
         height: 45px;
@@ -87,18 +132,20 @@ position: relative;
         transform: translate(-50%, -50%);
 
         animation-name: up;
-        animation-duration: 1s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-        
+        animation-duration: 1.5s;
+        animation-timing-function: ease-in-out;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;        
     }
 }
 
 @keyframes up{
     from {
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
     }
     to {
-        transform: translate(-50%, -70%);
+        transform: translate(-50%, -50%) scale(1.2);
+        box-shadow: 0 2px 8px 2px transparentize($color-dark, 0.5);
     }
 }
