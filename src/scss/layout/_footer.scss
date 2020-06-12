@@ -5,13 +5,11 @@
     @include tablet{
         padding-top: 45px;
     }
+
     & .wrapper {
         text-align: center;
         text-transform: uppercase;
-        color: $color-light;
-        font-family: $font-family-primary;
-        font-size: 16px;
-        line-height: $line-height-s;
+        @include font($color-light, $font-family-primary, 16px, $font-weight-regular, $line-height-s);
         @include tablet{
             display: flex;
             justify-content: space-between;
@@ -20,6 +18,7 @@
         @include desktop {
             justify-content: center;
         }
+
         & .menu_articles {
             margin-bottom: 30px;
             @include tablet{
@@ -32,6 +31,7 @@
                 width: 160px;
             }
         }
+
         .menu_social {
             margin-bottom: 30px;
             @include tablet{
@@ -44,6 +44,7 @@
                 width: 160px;
             }
         }
+
         & .copy {
             font-size: 14px;
             text-transform:none;
@@ -53,9 +54,11 @@
             @include desktop {
                 width: 160px;
             }
+
             & .block {
                 display: block;
             }
+            
             & .heart {
                 color: $color-highlight;
             }
