@@ -7,12 +7,15 @@
     }
     & .wrapper {
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        text-transform: uppercase;
+        color: $color-light;
+        font-family: $font-family-primary;
+        font-size: 16px;
+        line-height: $line-height-s;
         @include tablet{
-            text-align: left;
-            flex-direction: row;
+            display: flex;
             justify-content: space-between;
+            text-align: left;
         }
         @include desktop {
             justify-content: center;
@@ -20,20 +23,13 @@
         & .menu_articles {
             margin-bottom: 30px;
             @include tablet{
+                margin-bottom: 0;
                 order: 1;
                 margin-left: 30px;
-                margin-bottom: 0;
                 width: 210px;
             }
             @include desktop {
                 width: 160px;
-            }
-            & a {
-                text-transform: uppercase;
-                color: $color-light;
-                font-family: $font-family-primary;
-                font-size: 16px;
-                line-height: $line-height-s;
             }
         }
         .menu_social {
@@ -47,19 +43,10 @@
             @include desktop {
                 width: 160px;
             }
-            & a {
-                text-transform: uppercase;
-                color: $color-light;
-                font-family: $font-family-primary;
-                font-size: 16px;
-                line-height: $line-height-s;
-            }
         }
         & .copy {
-            color: $color-light;
-            font-family: $font-family-primary;
             font-size: 14px;
-            line-height: $line-height-s;
+            text-transform:none;
             @include tablet{
                 width: 210px;
             }

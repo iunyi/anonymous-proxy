@@ -26,72 +26,54 @@
                 font-size: 26px;
                 line-height: $line-height-m;
             }
+            @include desktop {
+                font-size: 32px;
+            }
         }
-        & .reason_1 {
+        & .reason {
             font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 45px;
+            @include tablet {
+                margin-bottom: 60px;
+            }
+            & h3 {
+                font-family: $font-family-title;
+                @include tablet {
+                    font-size: 24px;
+                    margin-bottom: 14px;
+                }
+            } 
+            & p {
+                font-family: $font-family-primary;
+                @include tablet {
+                    font-size: 20px;
+                }
+            } 
+        }
+        & .reason_1 {
             @include tablet {
                 grid-column: 1 / 2;
                 grid-row: 2/ 3;
-                margin-bottom: 60px;
             }
-
-            & h3 {
-                font-family: $font-family-title;
-                @include tablet {
-                    margin-bottom: 14px;
-                }
-            } 
-            & p {
-                font-family: $font-family-primary;
-            } 
         }
         & .reason_2 {
-            font-size: 18px;
-            line-height: $line-height-s;
-            margin-bottom: 45px;
             @include tablet {
                 grid-column: 2/ 3;
                 grid-row: 2/ 3;
-                margin-bottom: 60px;
-            }
-    
-            & h3 {
-                font-family: $font-family-title;
-                @include tablet {
-                    margin-bottom: 14px;
-                }
-            } 
-            & p {
-                font-family: $font-family-primary;
-            }         
+            }        
         }
         & .reason_3 {
-            font-size: 18px;
-            line-height: $line-height-s;
-            margin-bottom: 45px;
             @include tablet {
                 grid-column: 3/ 4;
                 grid-row: 2/ 3;
-                margin-bottom: 60px;
             }
-    
-            & h3 {
-                font-family: $font-family-title;
-                @include tablet {
-                    margin-bottom: 14px;
-                }
-            } 
-            & p {
-                font-family: $font-family-primary;
-            } 
         }
         & .button_highlight {
             margin: auto;
             border-radius: 22.5px;
             background-color:$color_highlight;
-            height: 45px;
+            line-height: $line-height-m;
             width: 184px;
             display: flex;
             justify-content: center;
@@ -128,10 +110,12 @@ position: relative;
         width: 45px;
         background-color: $color-light;
         border-radius: 50%;
+        box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
+
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
+
         position: absolute;
         left: 50%;
         transform: translate(-50%, -50%);

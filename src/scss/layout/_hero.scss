@@ -21,6 +21,7 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center; 
+        text-align: center;
         @include tablet {
             padding-bottom: 45px;
         }
@@ -36,7 +37,6 @@
             font-size: 45px;
             line-height: $line-height-l;
             text-shadow: 0 2px 3px transparentize($color-dark, 0.2);
-            text-align: center;
             margin-bottom: 10px;
             @include tablet {
                 font-size: 80px;
@@ -62,9 +62,6 @@
             @include tablet {
                 font-size: 24px;
                 margin-bottom: 30px;
-            }
-            @include desktop {
-                font-size: 24px;
             }
         }
         & .circle {

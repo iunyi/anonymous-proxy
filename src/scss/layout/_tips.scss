@@ -25,9 +25,11 @@
             font-family: $font-family-title;
             font-weight: $font-weight-bold;
             font-size: 24px;
-            line-height: $line-height-m;
+            line-height: $line-height-s;
             margin-bottom: 15px;
             @include tablet {
+                font-size: 26px;
+                line-height: $line-height-m;
                 margin-bottom: 30px;
             }
             @include desktop {
@@ -40,7 +42,7 @@
             font-size: 18px;
             line-height: $line-height-s;
             margin-bottom: 30px;
-            @include desktop {
+            @include tablet {
                 font-size: 20px;
             }
         }
@@ -52,7 +54,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: background-color ease-out 1s, font-style ease 1s;
+            transition: background-color ease-out 1s, color ease 1s;
             @include tablet {
                 width: 91px;
             }
