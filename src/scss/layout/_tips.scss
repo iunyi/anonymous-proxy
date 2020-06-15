@@ -45,12 +45,12 @@
             border: 2px solid $color-highlight;
             height: 45px;
             width: 76px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background-color ease-out 1s, color ease 1s;
+            @include flex-center;
             @include tablet {
                 width: 91px;
+                &:hover {
+                    border: none;
+                }
             }
             @include desktop {
                 width: 160px;
@@ -59,12 +59,17 @@
             & a {
                 height: 100%;
                 width: 100%;
+                border-radius: 22.5px;
                 text-align: center;
                 @include font($color-highlight, $font-family-primary, 20px, $font-weight-medium, $line-height-m);
+                @include flex-center;
+
+                transition: background-color ease-out 1s, color ease 1s;
                 
                 &:hover {
                     background-color: $color-highlight;
                     color: $color-light;
+                    border: none;
                     border-radius: 22.5px;
                 }
             }
