@@ -12,7 +12,7 @@
         & .small {
             margin-bottom: 0;
             text-transform: capitalize;
-            @include font($color-tertiary, $font-family-primary, 14px, $font-weight-regular, $line-height-s)
+            @include font($color-tertiary, $font-family-primary, 14px, $font-weight-regular, $line-height-s);
             @include desktop {
                 font-size: 16px;
             }
@@ -21,7 +21,7 @@
         & h2 {
             margin-bottom: 15px;
             text-transform: capitalize;
-            @include font($color-dark, $font-family-title, 24px, $font-weight-bold, $line-height-s)
+            @include font($color-dark, $font-family-title, 24px, $font-weight-bold, $line-height-s);
             @include tablet {
                 font-size: 26px;
                 line-height: $line-height-m;
@@ -60,7 +60,7 @@
                 height: 100%;
                 width: 100%;
                 text-align: center;
-                @include font($color-highlight, $font-family-primary, 20px, $font-weight-medium, $line-height-m)
+                @include font($color-highlight, $font-family-primary, 20px, $font-weight-medium, $line-height-m);
                 
                 &:hover {
                     background-color: $color-highlight;

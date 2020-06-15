@@ -5,16 +5,6 @@
     background-position: center;
     height: 100vh;
 
-    & .menu {
-        position: fixed;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $color-secondary;
-    }
-
     & .wrapper {
         padding-bottom: 53px;
         height: 100vh;
