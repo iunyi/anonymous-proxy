@@ -1,106 +1,113 @@
 .footer {
-    position: relative;
-    background-color: $color-primary;
-    padding-top: 60px;
-    padding-bottom: 45px;
-    @include tablet{
-        padding-top: 45px;
+  position: relative;
+  background-color: $color-primary;
+  padding-top: 60px;
+  padding-bottom: 45px;
+  @include tablet {
+    padding-top: 45px;
+  }
+
+  & .circle {
+    height: 45px;
+    width: 45px;
+    background-color: $color-light;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: up;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    & a {
+      width: 100%;
+      height: 100%;
+      @include flex-center;
+    }
+  }
+
+  @keyframes up {
+    from {
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
+    }
+    to {
+      transform: translate(-50%, -50%) scale(1.2);
+      box-shadow: 0 2px 8px 2px transparentize($color-dark, 0.5);
+    }
+  }
+
+  & .wrapper {
+    text-align: center;
+    text-transform: uppercase;
+    & a:hover {
+      color: $color-highlight;
+    }
+    @include font(
+      $color-light,
+      $font-family-primary,
+      16px,
+      $font-weight-regular,
+      $line-height-s
+    );
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+    }
+    @include desktop {
+      justify-content: center;
     }
 
-    & .circle {
-        height: 45px;
-        width: 45px;
-        background-color: $color-light;
-        border-radius: 50%;
-        box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
-
-        animation-name: up;
-        animation-duration: 1.5s;
-        animation-timing-function: ease-in-out;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
-        
-        position: absolute;
-        left: 50%;
-        top: 0;
-
-        & a {
-            width: 100%;
-            height: 100%;
-            @include flex-center;
-        }
+    & .menu_articles {
+      margin-bottom: 30px;
+      @include tablet {
+        margin-bottom: 0;
+        order: 1;
+        margin-left: 30px;
+        width: 210px;
+      }
+      @include desktop {
+        width: 160px;
+      }
     }
-        
-    @keyframes up{
-        from {
-            transform: translate(-50%, -50%) scale(1);
-            box-shadow: 0 2px 4px 0 transparentize($color-dark, 0.5);
-        }
-        to {
-            transform: translate(-50%, -50%) scale(1.2);
-            box-shadow: 0 2px 8px 2px transparentize($color-dark, 0.5);
-        }
+
+    .menu_social {
+      margin-bottom: 30px;
+      @include tablet {
+        order: 1;
+        margin-left: 30px;
+        margin-bottom: 0;
+        width: 210px;
+      }
+      @include desktop {
+        width: 160px;
+      }
     }
-    
-    & .wrapper {
-        text-align: center;
-        text-transform: uppercase;
-        & a:hover {
-            color: $color-highlight;
-        }
-        @include font($color-light, $font-family-primary, 16px, $font-weight-regular, $line-height-s);
-        @include tablet{
-            display: flex;
-            justify-content: space-between;
-            text-align: left;
-        }
-        @include desktop {
-            justify-content: center;
-        }
 
-        & .menu_articles {
-            margin-bottom: 30px;
-            @include tablet{
-                margin-bottom: 0;
-                order: 1;
-                margin-left: 30px;
-                width: 210px;
-            }
-            @include desktop {
-                width: 160px;
-            }
-        }
+    & .copy {
+      font-size: 14px;
+      text-transform: none;
+      @include tablet {
+        width: 210px;
+      }
+      @include desktop {
+        width: 160px;
+      }
 
-        .menu_social {
-            margin-bottom: 30px;
-            @include tablet{
-                order: 1;
-                margin-left: 30px;
-                margin-bottom: 0;
-                width: 210px;
-            }
-            @include desktop {
-                width: 160px;
-            }
-        }
+      & .block {
+        display: block;
+      }
 
-        & .copy {
-            font-size: 14px;
-            text-transform:none;
-            @include tablet{
-                width: 210px;
-            }
-            @include desktop {
-                width: 160px;
-            }
-
-            & .block {
-                display: block;
-            }
-            
-            & .heart {
-                color: $color-highlight;
-            }
-        }
+      & .heart {
+        color: $color-highlight;
+      }
     }
+  }
 }

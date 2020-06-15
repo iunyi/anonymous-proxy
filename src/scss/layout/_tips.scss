@@ -1,78 +1,102 @@
 .tips {
-    & .wrapper {
-        padding-top: 30px;
-        padding-bottom: 45px;
-        @include tablet {
-            padding-bottom: 60px;
-        }
-        @include desktop {
-            padding-top: 60px;
-        }
-
-        & .small {
-            margin-bottom: 0;
-            text-transform: capitalize;
-            @include font($color-tertiary, $font-family-primary, 14px, $font-weight-regular, $line-height-s);
-            @include desktop {
-                font-size: 16px;
-            }
-        }
-
-        & h2 {
-            margin-bottom: 15px;
-            text-transform: capitalize;
-            @include font($color-dark, $font-family-title, 24px, $font-weight-bold, $line-height-s);
-            @include tablet {
-                font-size: 26px;
-                line-height: $line-height-m;
-                margin-bottom: 30px;
-            }
-            @include desktop {
-                font-size: 32px;
-            }
-        }
-
-        & p {
-            margin-bottom: 30px;
-            @include font($color-midtone, $font-family-primary, 18px, $font-weight-regular, $line-height-s);
-            @include tablet {
-                font-size: 20px;
-            }
-        }
-        
-        & .button_default {
-            border-radius: 22.5px;
-            border: 2px solid $color-highlight;
-            height: 45px;
-            width: 76px;
-            @include flex-center;
-            @include tablet {
-                width: 91px;
-                &:hover {
-                    border: none;
-                }
-            }
-            @include desktop {
-                width: 160px;
-            }
-
-            & a {
-                height: 100%;
-                width: 100%;
-                border-radius: 22.5px;
-                text-align: center;
-                @include font($color-highlight, $font-family-primary, 20px, $font-weight-medium, $line-height-m);
-                @include flex-center;
-
-                transition: background-color ease-out 1s, color ease 1s;
-                
-                &:hover {
-                    background-color: $color-highlight;
-                    color: $color-light;
-                    border: none;
-                    border-radius: 22.5px;
-                }
-            }
-        }
+  & .wrapper {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    @include tablet {
+      padding-bottom: 60px;
     }
+    @include desktop {
+      padding-top: 60px;
+    }
+
+    & .small {
+      margin-bottom: 0;
+      text-transform: capitalize;
+      @include font(
+        $color-tertiary,
+        $font-family-primary,
+        14px,
+        $font-weight-regular,
+        $line-height-s
+      );
+      @include desktop {
+        font-size: 16px;
+      }
+    }
+
+    & h2 {
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      @include font(
+        $color-dark,
+        $font-family-title,
+        24px,
+        $font-weight-bold,
+        $line-height-s
+      );
+      @include tablet {
+        font-size: 26px;
+        line-height: $line-height-m;
+        margin-bottom: 30px;
+      }
+      @include desktop {
+        font-size: 32px;
+      }
+    }
+
+    & p {
+      margin-bottom: 30px;
+      @include font(
+        $color-midtone,
+        $font-family-primary,
+        18px,
+        $font-weight-regular,
+        $line-height-s
+      );
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+
+    & .button_default {
+      border-radius: 22.5px;
+      border: 2px solid $color-highlight;
+      height: 45px;
+      width: 76px;
+      @include flex-center;
+      @include tablet {
+        width: 91px;
+        &:hover {
+          border: none;
+        }
+      }
+      @include desktop {
+        width: 160px;
+      }
+
+      & a {
+        height: 100%;
+        width: 100%;
+        border-radius: 22.5px;
+        text-align: center;
+        @include font(
+          $color-highlight,
+          $font-family-primary,
+          20px,
+          $font-weight-medium,
+          $line-height-m
+        );
+        @include flex-center;
+
+        transition: background-color ease-out 1s, color ease 1s;
+
+        &:hover {
+          background-color: $color-highlight;
+          color: $color-light;
+          border: none;
+          border-radius: 22.5px;
+        }
+      }
+    }
+  }
 }

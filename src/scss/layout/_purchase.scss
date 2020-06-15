@@ -1,116 +1,127 @@
 .purchase {
-    background-color: $color-tertiary-light;
-    & .wrapper {
-        padding-top: 30px;
-        padding-bottom: 60px;
-        display: grid;
-        grid-template-rows: 75px 1fr 1fr 1fr 45px;
-        text-align: center;
-        @include tablet {
-            grid-template-rows: 90px 1fr 45px;
-            grid-template-columns: repeat(3,1fr);
-        }
-        @include desktop {
-            padding-top: 60px;
-        }
-
-        & .reason_title {
-            margin-bottom: 45px;
-            text-transform: capitalize;
-            @include font($color-dark, $font-family-title, 24px, $font-weight-regular, $line-height-s);
-            @include tablet {
-                grid-column: 1 / 4;
-                grid-row: 1 / 2;
-                font-size: 26px;
-                line-height: $line-height-m;
-            }
-            @include desktop {
-                font-size: 32px;
-            }
-        }
-
-        & .reason {
-            font-size: 18px;
-            line-height: $line-height-s;
-            margin-bottom: 45px;
-            @include tablet {
-                margin-bottom: 60px;
-            }
-
-            & h3 {
-                font-family: $font-family-title;
-                @include tablet {
-                    font-size: 24px;
-                    margin-bottom: 14px;
-                }
-            } 
-
-            & p {
-                font-family: $font-family-primary;
-                @include tablet {
-                    font-size: 20px;
-                }
-            } 
-        }
-
-        & .reason_1 {
-            @include tablet {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-                margin-right: 15px;
-            }
-        }
-
-        & .reason_2 {
-            @include tablet {
-                grid-column: 2 / 3;
-                grid-row: 2 / 3;
-                margin-left: 15px;
-                margin-right: 15px;
-            }        
-        }
-
-        & .reason_3 {
-            @include tablet {
-                grid-column: 3 / 4;
-                grid-row: 2 / 3;
-                margin-left: 15px;
-            }
-        }
-        
-        & .button_highlight {
-            margin: auto;
-            border-radius: 22.5px;
-            background-color: $color_highlight;
-            line-height: $line-height-m;
-            width: 184px;
-            height: 45px;
-            @include flex-center;
-            @include tablet {
-                grid-column: 1 / 4;
-                grid-row: 3 / 4;
-                width: 210px;
-            }
-            @include desktop {
-                width: 255px;
-            }
-
-            & a {
-                width: 100%;
-                height: 100%;
-                text-transform: initial;
-                @include font($color-light, $font-family-primary, 20px, $font-weight-medium, $line-height-m);
-
-                transition: background-color linear 0.5s;
-
-                &:hover {
-                    background-color: $color-light;
-                    color: $color-highlight;
-                    box-shadow: 0 2px 4px transparentize($color-dark, 0.5);
-                    border-radius: 22.5px;
-                }
-            }
-        }
+  background-color: $color-tertiary-light;
+  & .wrapper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    display: grid;
+    grid-template-rows: 75px 1fr 1fr 1fr 45px;
+    text-align: center;
+    @include tablet {
+      grid-template-rows: 90px 1fr 45px;
+      grid-template-columns: repeat(3, 1fr);
     }
-}
+    @include desktop {
+      padding-top: 60px;
+    }
 
+    & .reason_title {
+      margin-bottom: 45px;
+      text-transform: capitalize;
+      @include font(
+        $color-dark,
+        $font-family-title,
+        24px,
+        $font-weight-regular,
+        $line-height-s
+      );
+      @include tablet {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        font-size: 26px;
+        line-height: $line-height-m;
+      }
+      @include desktop {
+        font-size: 32px;
+      }
+    }
+
+    & .reason {
+      font-size: 18px;
+      line-height: $line-height-s;
+      margin-bottom: 45px;
+      @include tablet {
+        margin-bottom: 60px;
+      }
+
+      & h3 {
+        font-family: $font-family-title;
+        @include tablet {
+          font-size: 24px;
+          margin-bottom: 14px;
+        }
+      }
+
+      & p {
+        font-family: $font-family-primary;
+        @include tablet {
+          font-size: 20px;
+        }
+      }
+    }
+
+    & .reason_1 {
+      @include tablet {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        margin-right: 15px;
+      }
+    }
+
+    & .reason_2 {
+      @include tablet {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+
+    & .reason_3 {
+      @include tablet {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        margin-left: 15px;
+      }
+    }
+
+    & .button_highlight {
+      margin: auto;
+      border-radius: 22.5px;
+      background-color: $color_highlight;
+      line-height: $line-height-m;
+      width: 184px;
+      height: 45px;
+      @include flex-center;
+      @include tablet {
+        grid-column: 1 / 4;
+        grid-row: 3 / 4;
+        width: 210px;
+      }
+      @include desktop {
+        width: 255px;
+      }
+
+      & a {
+        width: 100%;
+        height: 100%;
+        text-transform: initial;
+        @include font(
+          $color-light,
+          $font-family-primary,
+          20px,
+          $font-weight-medium,
+          $line-height-m
+        );
+
+        transition: background-color linear 0.5s;
+
+        &:hover {
+          background-color: $color-light;
+          color: $color-highlight;
+          box-shadow: 0 2px 4px transparentize($color-dark, 0.5);
+          border-radius: 22.5px;
+        }
+      }
+    }
+  }
+}
